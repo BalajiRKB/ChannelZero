@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { AuthProvider, useAuth } from './contexts/AuthContext.tsx';
 import Navbar from './components/Navbar.tsx';
+import LandingPage from './pages/LandingPage.tsx';
 import LoginPage from './pages/LoginPage.tsx';
 import RegisterPage from './pages/RegisterPage.tsx';
 import DashboardPage from './pages/DashboardPage.tsx';
@@ -56,6 +57,9 @@ function App() {
         <Router>
           <div className="min-h-screen bg-gray-50">
             <Routes>
+              {/* Landing page */}
+              <Route path="/" element={<LandingPage />} />
+              
               {/* Public routes */}
               <Route
                 path="/login"
@@ -93,12 +97,9 @@ function App() {
                   </ProtectedRoute>
                 }
               />
-
-              {/* Redirect root to dashboard */}
-              <Route path="/" element={<Navigate to="/dashboard" />} />
               
               {/* 404 fallback */}
-              <Route path="*" element={<Navigate to="/dashboard" />} />
+              <Route path="*" element={<Navigate to="/" />} />
             </Routes>
           </div>
         </Router>
