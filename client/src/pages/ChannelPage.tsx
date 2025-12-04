@@ -87,8 +87,8 @@ const ChannelPage = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         <div className="card">
           <div className="flex items-center space-x-3">
-            <div className="p-2 bg-green-100 rounded-lg">
-              <DollarSign className="text-green-600" size={24} />
+            <div className="p-2 bg-gray-100 rounded-lg">
+              <DollarSign className="text-gray-600" size={24} />
             </div>
             <div>
               <p className="text-sm text-gray-600">Total Expenses</p>
@@ -102,8 +102,8 @@ const ChannelPage = () => {
 
         <div className="card">
           <div className="flex items-center space-x-3">
-            <div className="p-2 bg-blue-100 rounded-lg">
-              <Users className="text-blue-600" size={24} />
+            <div className="p-2 bg-gray-100 rounded-lg">
+              <Users className="text-gray-600" size={24} />
             </div>
             <div>
               <p className="text-sm text-gray-600">Members</p>
@@ -116,8 +116,8 @@ const ChannelPage = () => {
 
         <div className="card">
           <div className="flex items-center space-x-3">
-            <div className="p-2 bg-purple-100 rounded-lg">
-              <Calendar className="text-purple-600" size={24} />
+            <div className="p-2 bg-gray-100 rounded-lg">
+              <Calendar className="text-gray-600" size={24} />
             </div>
             <div>
               <p className="text-sm text-gray-600">Expenses Count</p>
@@ -139,13 +139,13 @@ const ChannelPage = () => {
               className="flex items-center space-x-2 bg-gray-100 rounded-full px-3 py-1"
             >
               <div className="w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs font-medium">
+                <span className="text-black text-xs font-medium">
                   {member.user.name.charAt(0).toUpperCase()}
                 </span>
               </div>
               <span className="text-sm font-medium">{member.user.name}</span>
               {member.role === 'admin' && (
-                <span className="text-xs bg-primary-100 text-primary-800 px-2 py-0.5 rounded">
+                <span className="text-xs bg-gray-300 text-primary-800 px-2 py-0.5 rounded">
                   Admin
                 </span>
               )}
